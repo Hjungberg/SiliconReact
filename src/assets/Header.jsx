@@ -40,12 +40,12 @@ const Header = () => {
         </button>
 
         <ul id="main-menu" className="main-menu hide">
+          <div className="pad2">
           <li>
-            <NavLink className="nav-link hide" to='/features'>Features</NavLink>
-          </li>  
-          <li>
-            <NavLink className='nav-link hide' to='/contact'>Contact</NavLink>
+            <NavLink className="nav-link pad2 hide" to='/features'>Features</NavLink>
+            <NavLink className='nav-link pad2 hide' to='/contact'>Contact</NavLink>
           </li>
+          </div>
           
           <li>
             <a href="#" className="btn btn-primary">

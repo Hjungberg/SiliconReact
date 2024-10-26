@@ -320,6 +320,10 @@ h6 {
   width: 100%;
   top: 0;
 }
+.main-nav .pad2 {
+  padding-right: 2rem;
+}
+
 .main-nav .skip-link {
   padding: 1rem;
   display: inline-block;
