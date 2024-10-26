@@ -4,6 +4,7 @@ import SiliconLogo from "../images/silicon_logo.svg";
 import SiliconLogoDark from "../images/logodark.svg";
 import Hamburger from "../images/hamburger.png";
 import UserIcon from "../images/user-icon.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -40,10 +41,12 @@ const Header = () => {
 
         <ul id="main-menu" className="main-menu hide">
           <li>
-            <a href="#" className="nav-link hide">
-              Features
-            </a>
+            <NavLink className="nav-link hide" to='/features'>Features</NavLink>
+          </li>  
+          <li>
+            <NavLink className='nav-link hide' to='/contact'>Contact</NavLink>
           </li>
+          
           <li>
             <a href="#" className="btn btn-primary">
               <img src={UserIcon} className="user-icon" />

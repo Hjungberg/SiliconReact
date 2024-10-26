@@ -1,32 +1,26 @@
-
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./assets/Header";
 import Fotter from "./assets/Fotter";
-import Showcase from "./assets/Showcase";
-import Customers from "./assets/Customers";
-import Features from "./assets/Features";
-import Work from "./assets/Work";
-import Money from "./assets/Money";
-import Review from "./assets/Review";
-import Questions from "./assets/Questions";
-import Newsletter from "./assets/Newsletter";
-function App() {
 
+import Home from "./views/Home";
+import Contact from "./views/Contact";
+import Features from "./views/Features"
+
+function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-        <main id="main">
-          <Showcase />
-          <Customers />
-          <Features />
-          <Work />
-          <Money />
-          <Review />
-          <Questions />
-          <Newsletter />
-        </main>
+      <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/features" element={<Features />} />
+      </Routes>
+      </main>
       <Fotter />
-    </>
+    </BrowserRouter>
   );
 }
 
