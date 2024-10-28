@@ -5,6 +5,7 @@ import SiliconLogoDark from "../images/logodark.svg";
 import Hamburger from "../images/hamburger.png";
 import UserIcon from "../images/user-icon.png";
 import { NavLink } from "react-router-dom";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 const Header = () => {
   return (
@@ -15,20 +16,10 @@ const Header = () => {
       <div className="container">
         <a href="/">
           <img className="showlight" src={SiliconLogo} alt="Silicon Logotype" />
-          <img
-            className="showdark"
-            src={SiliconLogoDark}
-            alt="Silicon Logotype"
-          />
+          <img className="showdark"  src={SiliconLogoDark} alt="Silicon Logotype"/>
         </a>
 
-        <div className="darkmode-toggle">
-          <p className="hide">Dark Mode</p>
-          <label className="toggle">
-            <input type="checkbox" id="darkmode-switch" />
-            <span className="slider"></span>
-          </label>
-        </div>
+        <DarkModeSwitch />
 
         <button
           className="menu-btn"
