@@ -7,7 +7,7 @@ import iconR from '../images/icon-r.svg'
 const ContactUs = () => {
   return (
     <section aria-label="Contact us" className="contact">
-      <div >
+      <div className="container">
         <h2>Contact Us</h2>
         <div className="contactUsGrid">
           <div className="contactUsCard">

@@ -1,15 +1,19 @@
 import React from "react";
 import ContactUs from "../assets/ContactUs";
 import ContactForm from "../assets/ContactForm";
+import BreadCrum from "../assets/BreadCrum";
+import ContactMap from "../assets/ContactMap";
 
 const Contact = () => {
 
   return (
     <>
-    <div >
+    <section>
+      <BreadCrum />
       <ContactUs />
       <ContactForm />
-    </div>
+      <ContactMap />
+    </section>
     </>
   )
 };
