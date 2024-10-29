@@ -32,10 +32,10 @@ const ContactMap = () => {
 
 
         <div className='maplinks container'>
-          <img src={facebook} alt="" />
-          <img src={twitter} alt="" />
-          <img src={insta} alt="" />
-          <img src={youtube} alt="" />
+          <a href="#"><img src={facebook} alt="" /></a>
+          <a href="#"><img src={twitter} alt="" /></a>
+          <a href="#"><img src={insta} alt="" /></a>
+          <a href="#"><img src={youtube} alt="" /></a>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <section>
       <form action="" className='contactForm'>
-        <h1>Get Online Consultation</h1>
+        <p className='h2'>Get Online Consultation</p>
         <label className='contactLabel' htmlFor="fname">Full Name</label>
         <input type="text" id='fname' className='contactFormText'/>
         <label className='contactLabel' htmlFor="email">Email</label>
@@ -16,7 +16,7 @@ const ContactForm = () => {
           <option value="2">Option 2</option>
           <option value="3">Option 3</option>
         </select>
-        <button type="submit" className='btn btn-blue btn-contact'> Make an appointment</button>
+        <button type="submit" className='btn btn-primary btn-contact'> Make an appointment</button>
         
         
       </form>

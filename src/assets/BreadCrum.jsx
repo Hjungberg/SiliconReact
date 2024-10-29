@@ -1,5 +1,4 @@
 import React from "react";
-
 import homeIcon from "../images/bx-home.svg";
 
 const BreadCrum = () => {
