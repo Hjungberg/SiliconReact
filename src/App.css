@@ -813,17 +813,28 @@ h6 {
   flex-basis: 33%;
   justify-content: left;
   gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 350px;
 }
 
 .client-cards {
+
   display: flex;
-  width: 30%;
-  padding: 1rem;
-  width: 100%;
-  
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 60%;
+  height: 300px;
 }
+.client-card {
+background-color: var(--clr-bg);
+padding-right: 1rem;  
+}
+
 .client-items {
   display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .client-img1 {

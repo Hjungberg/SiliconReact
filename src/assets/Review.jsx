@@ -18,9 +18,15 @@ const Review = () => {
     setReviews(data);
   };
 
+
   useEffect(() => {
     fetchData();
   }, []);
+
+  let images = []
+  images[4] = Stars4
+  images[5] = Stars5
+
 
   function Post(reviews) {
     return (
@@ -35,16 +41,16 @@ const Review = () => {
     <section aria-label="Clients are loving our app" className="reviews">
       <div className="container space-y-3">
         <div className="clients">
-          <div className="client-cards">
+          <div className="">
             <p className="eb-40">Clients are Loving Our App</p>
           </div>
 
           <div className="client-cards">
             {reviews.map((reviews) => (
               <>
-                <div>
+                <div className="client-card">
                 <img src={Quotes} alt="" className="client-img1" />
-                <img src={Stars4} alt="" className="client-img2" />
+                <img src={images[reviews.starRating]} alt="" className="client-img2" />
                 <p>{reviews.comment}</p>
                 <div className="client-items">
                   <img src={reviews.avatarUrl} alt="" className="client-img3" />
