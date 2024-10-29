@@ -410,6 +410,9 @@ h6 {
   .main-nav .hide {
     display: none;
   }
+  .main-menu {
+    z-index: 1;
+  }
   .main-nav .menu-btn[aria-expanded=true] ~ .main-menu {
     animation: openMenu 250ms forwards;
   }
@@ -933,4 +936,68 @@ h6 {
   .footer {
     flex-direction: row;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.contact {
+  display: flex;
+  background-color: var(--clr-bg-100);
+  padding-left: 7rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+}
+.contactUs {
+  display: grid;
+  margin-top: 5rem;
+  justify-content: flex-start;
+  padding: 2rem;
+  padding-left: 5rem;
+  
+}
+.contactUsGrid {
+  margin-top: 3rem;
+
+}
+.contactUsCard {
+  display: flex;
+}
+.contactUsIcon {
+  background-color: white;
+  height: 100%;
+  border-radius: 50%;
+
+
+}
+.contactUsText {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  width: 60%;
+  a {
+    text-decoration: none;
+  }
+}
+.messageUs {
+  display: inline-flex;
+  text-wrap: nowrap;
+  align-items: center;
+
+}
+.contactForm {
+  border: 1px solid black;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: .5em;
+  font-weight: 600;
+}
+.contactLabel {
+  margin-top: 3rem;
+}
+.contactFormText {
+  border-radius: .5em;
+  height: 3rem;
+  
+}
+.btn-contact {
+  margin-top: 8rem;
+}
