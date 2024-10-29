@@ -5,8 +5,8 @@ const ContactForm = () => {
     <section>
       <form action="" className='contactForm'>
         <p className='h2'>Get Online Consultation</p>
-        <label className='contactLabel' htmlFor="fname">Full Name</label>
-        <input type="text" id='fname' className='contactFormText'/>
+        <label className='contactLabel' htmlFor="fullName">Full Name</label>
+        <input type="text" id='fullName' className='contactFormText'/>
         <label className='contactLabel' htmlFor="email">Email</label>
         <input type="text" id='email' className='contactFormText'/>
         <label className='contactLabel' htmlFor="specialist">Specialist</label>

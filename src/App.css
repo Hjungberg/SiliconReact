@@ -816,8 +816,14 @@ h6 {
 }
 
 .client-cards {
+  display: flex;
   width: 30%;
   padding: 1rem;
+  width: 100%;
+  
+}
+.client-items {
+  display: flex;
 }
 
 .client-img1 {
@@ -829,7 +835,7 @@ h6 {
 }
 
 .client-img3 {
-  width: 60%;
+  width: 20%;
 }
 
 .questions {
