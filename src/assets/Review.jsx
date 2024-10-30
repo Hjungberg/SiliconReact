@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import Quotes from "../images/quotes.svg";
 import Stars4 from "../images/4stars.svg";
 import Stars5 from "../images/5stars.svg";
-import Fanny from "../images/fanny.svg";
-import Albert from "../images/albert.svg";
+
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
+
+
 
   const fetchData = async () => {
     const res = await fetch(
@@ -24,6 +25,9 @@ const Review = () => {
   }, []);
 
   let images = []
+  images[1] = Stars4
+  images[2] = Stars4
+  images[3] = Stars4
   images[4] = Stars4
   images[5] = Stars5
 

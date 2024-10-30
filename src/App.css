@@ -295,6 +295,10 @@ h6 {
   background-color: hsl(from var(--clr-primary) h s calc(l - 10));
 }
 
+.hideMe {
+  display: none;
+}
+
 .toggle {
   --_w: 46px;
   --_h: 24px;

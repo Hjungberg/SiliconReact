@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import IconPhone from "../images/icon-phone.svg";
 import ContactBlue from "../images/contact-blue.svg";
@@ -6,33 +6,6 @@ import ContactGreen from '../images/contact-green.svg';
 import IconChat from "../images/icon-chat.svg";
 
 const Questions = () => {
-
-  const [getFaq, setGetFaq] = useState([])
-
-  const fetchData = async () => {
-    const res = await fetch(
-      "https://win24-assignment.azurewebsites.net/api/faq"
-    );
-    const data = await res.json();
-    setGetFaq(data);
-  };
-
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const toggleFaq = (() => {
-    console.log('click')
-
-  });
-
-  const [showName, setshowName] = useState(true)
-  const toggleName = () => {
-    setshowName(value => !value)
-  }
-
-
   return (
     <section aria-label="Any questions" className="questions space-y-3">
       <div className="container">
@@ -66,21 +39,55 @@ const Questions = () => {
               <p className="quest-mobile">
                 Still have unanswered questions and need to get in touch?
               </p>
+              <div className="questions-list-items">
+                <p>Is any of my personal information stored in the App?</p>
+                <a href="#features" className="btn-round btn-white">
+                  <i className="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
 
-              {getFaq.map((getFaq) => (              
-                <>
-                  <div className="questions-list-items">
-                    <p>{getFaq.title}</p>
-                    <a href="#features" className="btn-round btn-blue" onClick={toggleName}>
-                      
-                      <i className="fa-solid fa-chevron-down"></i>
-                    </a>
-                  </div>
-                  { showName && 
-                  <p className={showName}>{getFaq.content}</p>}
-                </>
-              ))}
+              <div className="questions-list-items">
+                <p>What formats can I download my transaction history in?</p>
+                <a href="#features" className="btn-round btn-white">
+                  <i className="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div className="questions-list-items">
+                <p>Can I schedule future transfers?</p>
+                <a href="#features" className="btn-round btn-blue">
+                  <i className="fa-solid fa-chevron-up"></i>
+                </a>
+              </div>
+              <p className="qustion-selected">
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
+                Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus
+                adipiscing gravida et consequat lobortis arcu velit. Nibh
+                pharetra fermentum duis accumsan lectus non. Massa cursus
+                molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus
+                gravida adipiscing euismod montes, duis egestas. Vehicula eu
+                etiam quam tristique tincidunt suspendisse ut consequat.
+              </p>
 
+              <div className="questions-list-items">
+                <p>When can I use Banking App services?</p>
+                <a href="#features" className="btn-round btn-white">
+                  <i className="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div className="questions-list-items">
+                <p>
+                  Can I create my own password that is easy for me to remember?
+                </p>
+                <a href="#features" className="btn-round btn-white">
+                  <i className="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div className="questions-list-items">
+                <p>What happens if I forget or lose my password?</p>
+                <a href="#features" className="btn-round btn-white">
+                  <i className="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
               <div className="space-y-3 quest-mobile-only">
                 <a href="#" className="btn btn-primary sp">
                   <span>Contact us now</span>

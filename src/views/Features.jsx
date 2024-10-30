@@ -6,8 +6,8 @@ import Review from '../assets/Review'
 const Features = () => {
   return (
     <>
-    {/* <Feature /> */}
-    <Review />
+    <Feature />
+    
     </>
   )
 }
