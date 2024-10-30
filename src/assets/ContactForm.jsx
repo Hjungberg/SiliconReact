@@ -1,6 +1,10 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
 
 const ContactForm = () => {
+
+  const { register, handleSubmit, formState : {errors} ,reset} = useForm()
+
   return (
     <section>
       <form action="" className='contactForm'>

@@ -960,6 +960,7 @@ padding-right: 1rem;
   justify-content: space-between;
   text-overflow: clip;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451);
+  
 }
 
 .questions-list-items p {

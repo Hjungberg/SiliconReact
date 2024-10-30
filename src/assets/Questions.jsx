@@ -29,7 +29,7 @@ const Questions = () => {
       <>
       <div className="questions-list-items">
           <p>{title}</p>
-          <a href="#features" className="btn-round btn-blue" onClick={onToggle}>
+          <a href="#features" className="btn-round btn-primary" onClick={onToggle}>
           <i className={isOpen ? "fa-solid fa-chevron-up" : 
               "fa-solid fa-chevron-down"}></i>
           </a>
