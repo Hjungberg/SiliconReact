@@ -832,6 +832,8 @@ h6 {
 .client-card {
 background-color: var(--clr-bg);
 padding-right: 1rem;  
+height: 300px;
+margin-right: 1rem;
 }
 
 .client-items {
@@ -1180,6 +1182,7 @@ padding-right: 1rem;
   border-radius: .5em;
   font-size: 1rem;
   height: 3rem;
+  padding-left: .5em;
 
 }
 
