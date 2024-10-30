@@ -1,8 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Notification from '../images/notification.svg'
+import Notification from "../images/notification.svg";
 
 const Newsletter = () => {
+  const [formData, setFormData] = useState({ email: "" });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    if (value.trim() === "") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: `The ${name} field is required.`,
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+    }
+  };
+
+  const handleOk = () => {
+    setSubmitted(false);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const newErrors = {};
+    Object.keys(formData).forEach((field) => {
+      if (formData[field].trim() === "") {
+        newErrors[field] = `The ${field} field is required.`;
+      }
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      console.log(errors);
+      return;
+    }
+
+    const res = await fetch(
+      "https://win24-assignment.azurewebsites.net/api/forms/subscribe",
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (res.ok) {
+      setSubmitted(true);
+      setFormData({ email: "" });
+      const data = await res.text;
+    } else {
+      const data = await res.text;
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="subThank h3">
+        Thank you for subscribing!
+        <button onClick={handleOk} className="btn btn-primary">
+          Ok
+        </button>
+      </div>
+    );
+  }
+
   return (
     <section aria-label="Subscribe to our newsletter">
       <div className="newsletter">
@@ -17,15 +86,23 @@ const Newsletter = () => {
                 </p>
               </div>
             </div>
-
-            <div className="input-group">
-              <input
-                type="email"
-                className="form-input email"
-                placeholder="Your Email"
-              />
-              <button className="btn">Subscribe</button>
-            </div>
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="input-group">
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  value={FormData.email}
+                  placeholder="Email"
+                  onChange={handleChange}
+                  className="form-input email"
+                />
+                <button type="submit" className="btn">
+                  Subscribe
+                </button>
+              </div>
+              <span>{errors.email}</span>
+            </form>
           </div>
         </div>
       </div>

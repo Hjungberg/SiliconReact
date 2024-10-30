@@ -825,6 +825,9 @@ h6 {
   margin-right: 1rem;
   width: 60%;
   height: 300px;
+  li {
+    list-style: none;
+  }
 }
 .client-card {
 background-color: var(--clr-bg);
@@ -1224,4 +1227,17 @@ padding-right: 1rem;
 }
 .accordion-content {
   padding: 1rem 1rem;
+}
+.subThank {
+  display: flex; 
+  font-size: 2rem;
+  font-weight: 800;
+  justify-content: center;
+  gap: 1rem;
+  button {
+    margin-top: 0.8rem;
+    height: 2rem;
+    align-items: center;
+    width: 5rem;
+  }
 }
