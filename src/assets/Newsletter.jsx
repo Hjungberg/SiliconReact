@@ -37,9 +37,7 @@ const Newsletter = () => {
       }
       let test = formData[field]
       
-      if (regEx.test(test)) {
-        newErrors[field] = ``;
-      } else {
+      if (!regEx.test(test)) {
         newErrors[field] = `Not a valid Email`;
       }
  
