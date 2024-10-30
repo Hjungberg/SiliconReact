@@ -119,4 +119,20 @@ const Questions = () => {
   );
 };
 
+              {/* {getFaq.map((getFaq) => (              
+                <>
+                  <div className="questions-list-items">
+                    <p>{getFaq.title}</p>
+                    <a href="#features" className="btn-round btn-blue" onClick={toggleName}>
+                      
+                      <i className="fa-solid fa-chevron-down"></i>
+                    </a>
+                  </div>
+                  { showName && 
+                  <p className={showName}>{getFaq.content}</p>}
+                </>
+              ))} */}
+
+
+
 export default Questions;

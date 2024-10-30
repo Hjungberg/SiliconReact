@@ -22,15 +22,45 @@ const Questions = () => {
     fetchData();
   }, []);
 
-  const toggleFaq = (() => {
-    console.log('click')
 
-  });
+  // Lite hjälp från chat-gpt. 
+  const AccordionItem = ({ title, content, isOpen, onToggle }) => {
+    return (
+      <>
+      <div className="questions-list-items">
+          <p>{title}</p>
+          <a href="#features" className="btn-round btn-blue" onClick={onToggle}>
+          <i className={isOpen ? "fa-solid fa-chevron-up" : 
+              "fa-solid fa-chevron-down"}></i>
+          </a>
+        </div>
+        {isOpen && <div className="accordion-content">{content}</div>}
+      </>
+    );
+  };
+  
+  const Accordion = ({ items }) => {
+    const [openIndex, setOpenIndex] = useState(null);
+  
+    const handleToggle = (index) => {
+      setOpenIndex(openIndex === index ? null : index);
+    };
+  
+    return (
+      <div className="accordion">
+        {getFaq.map((getFaq, index) => (
+          <AccordionItem
+            key={index}
+            title={getFaq.title}
+            content={getFaq.content}
+            isOpen={openIndex === index}
+            onToggle={() => handleToggle(index)}
+          />
+        ))}
+      </div>
+    );
+  };
 
-  const [showName, setshowName] = useState(true)
-  const toggleName = () => {
-    setshowName(value => !value)
-  }
 
 
   return (
@@ -66,8 +96,8 @@ const Questions = () => {
               <p className="quest-mobile">
                 Still have unanswered questions and need to get in touch?
               </p>
-
-              {getFaq.map((getFaq) => (              
+              <Accordion items={getFaq} />
+              {/* {getFaq.map((getFaq) => (              
                 <>
                   <div className="questions-list-items">
                     <p>{getFaq.title}</p>
@@ -79,7 +109,7 @@ const Questions = () => {
                   { showName && 
                   <p className={showName}>{getFaq.content}</p>}
                 </>
-              ))}
+              ))} */}
 
               <div className="space-y-3 quest-mobile-only">
                 <a href="#" className="btn btn-primary sp">

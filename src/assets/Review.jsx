@@ -36,7 +36,7 @@ const Review = () => {
     return (
       <div className="client-cards">
         Author = {reviews.author}
-        {console.log(reviews)}
+      
       </div>
     );
   }
