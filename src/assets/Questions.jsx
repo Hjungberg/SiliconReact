@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import IconPhone from "../images/icon-phone.svg";
 import ContactBlue from "../images/contact-blue.svg";
-import ContactGreen from '../images/contact-green.svg';
+import ContactGreen from "../images/contact-green.svg";
 import IconChat from "../images/icon-chat.svg";
+import { Link } from "react-router-dom";
 
 const Questions = () => {
-
-  const [getFaq, setGetFaq] = useState([])
+  const [getFaq, setGetFaq] = useState([]);
 
   const fetchData = async () => {
     const res = await fetch(
@@ -17,35 +17,40 @@ const Questions = () => {
     setGetFaq(data);
   };
 
-
   useEffect(() => {
     fetchData();
   }, []);
 
-
-  // Lite hjälp från chat-gpt. 
+  // Lite hjälp från chat-gpt.
   const AccordionItem = ({ title, content, isOpen, onToggle }) => {
     return (
       <>
-      <div className="questions-list-items">
+        <div className="questions-list-items">
           <p>{title}</p>
-          <a href="#features" className="btn-round btn-primary" onClick={onToggle}>
-          <i className={isOpen ? "fa-solid fa-chevron-up" : 
-              "fa-solid fa-chevron-down"}></i>
+          <a
+            href="#features"
+            className="btn-round btn-primary"
+            onClick={onToggle}
+          >
+            <i
+              className={
+                isOpen ? "fa-solid fa-chevron-up" : "fa-solid fa-chevron-down"
+              }
+            ></i>
           </a>
         </div>
         {isOpen && <div className="accordion-content">{content}</div>}
       </>
     );
   };
-  
+
   const Accordion = ({ items }) => {
     const [openIndex, setOpenIndex] = useState(null);
-  
+
     const handleToggle = (index) => {
       setOpenIndex(openIndex === index ? null : index);
     };
-  
+
     return (
       <div className="accordion">
         {getFaq.map((getFaq, index) => (
@@ -61,8 +66,6 @@ const Questions = () => {
     );
   };
 
-
-
   return (
     <section aria-label="Any questions" className="questions space-y-3">
       <div className="container">
@@ -75,7 +78,9 @@ const Questions = () => {
                 <img src={IconPhone} alt="" className="client-img2" />
                 <p>Still have questions?</p>
                 <button>
-                  <img src={ContactBlue} alt="" />
+                  <Link to="Contact">
+                    <img src={ContactBlue} alt="" />
+                  </Link>
                 </button>
               </div>
               <div className="quest-contact-item"></div>
@@ -83,7 +88,9 @@ const Questions = () => {
                 <img src={IconChat} alt="" className="client-img2" />
                 <p>Don't like phonecalls?</p>
                 <button>
-                  <img src={ContactGreen} alt="" />
+                  <Link to="Contact">
+                    <img src={ContactGreen} alt="" />
+                  </Link>
                 </button>
               </div>
             </div>
@@ -96,20 +103,8 @@ const Questions = () => {
               <p className="quest-mobile">
                 Still have unanswered questions and need to get in touch?
               </p>
+
               <Accordion items={getFaq} />
-              {/* {getFaq.map((getFaq) => (              
-                <>
-                  <div className="questions-list-items">
-                    <p>{getFaq.title}</p>
-                    <a href="#features" className="btn-round btn-blue" onClick={toggleName}>
-                      
-                      <i className="fa-solid fa-chevron-down"></i>
-                    </a>
-                  </div>
-                  { showName && 
-                  <p className={showName}>{getFaq.content}</p>}
-                </>
-              ))} */}
 
               <div className="space-y-3 quest-mobile-only">
                 <a href="#" className="btn btn-primary sp">

@@ -4,7 +4,7 @@ import SiliconLogo from "../images/silicon_logo.svg";
 import SiliconLogoDark from "../images/logodark.svg";
 import Hamburger from "../images/hamburger.png";
 import UserIcon from "../images/user-icon.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DarkModeSwitch from "./DarkModeSwitch";
 
 const Header = () => {
@@ -41,14 +41,14 @@ const Header = () => {
         Skip to main content
       </a>
       <div className="container">
-        <a href="/">
+        <Link to="">
           <img className="showlight" src={SiliconLogo} alt="Silicon Logotype" />
           <img
             className="showdark"
             src={SiliconLogoDark}
             alt="Silicon Logotype"
           />
-        </a>
+        </Link>
 
         <DarkModeSwitch />
 
@@ -65,20 +65,20 @@ const Header = () => {
         <ul id="main-menu" className="main-menu ">
           <div className="pad2">
             <li>
-              <a className="nav-link pad2 " href="/features">
+              <NavLink className="nav-link pad2 " to="features">
                 Features
-              </a>
-              <a className="nav-link pad2 " href="/contact">
+              </NavLink>
+              <NavLink className="nav-link pad2 " to="contact">
                 Contact
-              </a>
+              </NavLink>
             </li>
           </div>
 
           <li>
-            <a href="#" className="btn btn-primary">
+            <Link to="SignIn" className="btn btn-primary">
               <img src={UserIcon} className="user-icon" />
               <span>Sign in / Up</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

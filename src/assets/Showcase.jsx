@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import AppleStore from "../images/applestore.svg";
 import AppleStoreDark from "../images/appstoredark.svg";
@@ -20,21 +21,25 @@ const Showcase = () => {
           <div className="market-btns">
             <a href="#" className="store-btn">
               <span className="sr-only">Download on the App store</span>
-              <img className="showlight" src={AppleStore} />
-              <img className="showdark" src={AppleStoreDark} />
+              <Link to="https://www.apple.com/se/store" target="_blank">
+                <img className="showlight" src={AppleStore} />
+                <img className="showdark" src={AppleStoreDark} />
+              </Link>
             </a>
 
             <a href="#" className="store-btn">
               <span className="sr-only">Get in on Google play</span>
-              <img className="showlight" src={GoogleStore} />
-              <img className="showdark" src={GoogleStoreDark} />
+              <Link to="https://store.google.com/" target="_blank">
+                <img className="showlight" src={GoogleStore} />
+                <img className="showdark" src={GoogleStoreDark} />
+              </Link>
             </a>
           </div>
 
           <div className="more">
-            <a href="#features" className="btn-round btn-white">
+            <Link to="features" className="btn-round btn-white">
               <i className="fa-solid fa-chevron-down"></i>
-            </a>
+            </Link>
             <span>Discover more</span>
           </div>
           <div className="phone-img-container">
