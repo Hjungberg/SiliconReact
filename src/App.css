@@ -1257,3 +1257,10 @@ margin-right: 1rem;
     width: 5rem;
   }
 }
+.infobox {
+  display: flex;
+  /* justify-content: center; */
+  text-align: center;
+  align-items: center;
+  height: 650px;
+}
