@@ -32,13 +32,13 @@ const Newsletter = () => {
     
     const newErrors = {};
     Object.keys(formData).forEach((field) => {
-      if (formData[field].trim() === "") {
-        newErrors[field] = `The ${field.value} field is required.`;
-      }
       let test = formData[field]
+      if (test === "") {
+        newErrors[field] = `The Email field is required.`;
+      }
       
       if (!regEx.test(test)) {
-        newErrors[field] = `Not a valid Email`;
+        newErrors[field] = `* Not a valid Email`;
       }
  
     });
@@ -108,7 +108,7 @@ const Newsletter = () => {
                   Subscribe
                 </button>
               </div>
-              <span>{errors.email}</span>
+              <span className="newsletterErrors">{errors.email}</span>
             </form>
           </div>
         </div>

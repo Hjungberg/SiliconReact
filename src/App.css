@@ -834,11 +834,17 @@ background-color: var(--clr-bg);
 padding-right: 1rem;  
 height: 300px;
 margin-right: 1rem;
+
+}
+
+.client-card-2 {
+  padding-top: .5rem;
+  margin: .5rem;
 }
 
 .client-items {
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem;
   gap: 1rem;
 }
 
@@ -983,6 +989,7 @@ margin-right: 1rem;
   padding-top: 6rem;
   padding: 2rem;
   background-color: var(--clr-bg);
+  height: 150px;
   background-image: linear-gradient(to top, rgba(99, 101, 241, 0.1), rgba(219, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 }
 
@@ -996,6 +1003,11 @@ margin-right: 1rem;
 .newsletter-row img {
   width: 50px;
   height: 50px;
+}
+.newsletterErrors {
+  font-size: .8rem;
+  color: red;
+  margin: 1rem;
 }
 
 @media (width < 992px) {
