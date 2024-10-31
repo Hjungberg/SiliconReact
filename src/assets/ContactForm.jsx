@@ -61,13 +61,13 @@ const ContactForm = () => {
           type="text"
           placeholder="Name"
           className="contactFormText"
-          {...register("fullName", { 
-            required: "The name field is required", 
+          {...register("fullName", {
+            required: "The name field is required",
             minLength: {
               value: 2,
-               message: "Name to short",
+              message: "Name to short",
             },
-               })}
+          })}
         />
         <span>{errors.fullName && errors.fullName.message}</span>
 
@@ -85,8 +85,6 @@ const ContactForm = () => {
               message: "Enter a valid email",
             },
           })}
-      // {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
-
         />
         <span>{errors.email && errors.email.message}</span>
 
@@ -96,7 +94,7 @@ const ContactForm = () => {
         <select
           className="contactFormText"
           {...register("specialist", {
-            required: "The specialist field is required",
+            required: {value: true, message: "The specialist field is required"},
           })}
         >
           <option value="">Select...</option>

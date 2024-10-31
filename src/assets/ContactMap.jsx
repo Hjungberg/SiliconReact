@@ -19,14 +19,14 @@ const ContactMap = () => {
             <p className='mapline' ><img src={map} alt="" />4517 Washington Ave. Manchester, Kentucky 39495</p>
             <p className='mapline' ><img src={phone} alt="" />(406) 555-0120</p>
             <p className='mapline' ><img src={time} alt="" />Mon - Fri: 9:00 am - 22:00 am</p>
-            <p className='mapline' ><div className='gap'></div>Sat - Sun: 9:00 am - 20:00 am</p>
+            <p className='mapline' ><span className='gap'></span>Sat - Sun: 9:00 am - 20:00 am</p>
         </div>
         <div className='mapcard'>
           <h2>Medical Center 1</h2>
             <p className='mapline' ><img src={map} alt="" />2464 Royal Ln. Mesa,New Jersey 45463</p>
             <p className='mapline' ><img src={phone} alt="" />(406) 544-0123</p>
             <p className='mapline' ><img src={time} alt="" />Mon - Fri: 9:00 am - 22:00 am</p>
-            <p className='mapline' ><div className='gap'></div>Sat - Sun: 9:00 am - 20:00 am</p>
+            <p className='mapline' ><span className='gap'></span>Sat - Sun: 9:00 am - 20:00 am</p>
         </div>
 
 
