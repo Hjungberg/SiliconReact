@@ -38,7 +38,7 @@ const Newsletter = () => {
       }
       
       if (!regEx.test(test)) {
-        newErrors[field] = `* Not a valid Email`;
+        newErrors[field] = `Not a valid Email`;
       }
  
     });

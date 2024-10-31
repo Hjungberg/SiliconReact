@@ -19,21 +19,21 @@ const Showcase = () => {
           </p>
 
           <div className="market-btns">
-            <a href="#" className="store-btn">
+            <div className="store-btn">
               <span className="sr-only">Download on the App store</span>
               <Link to="https://www.apple.com/se/store" target="_blank">
                 <img className="showlight" src={AppleStore} />
                 <img className="showdark" src={AppleStoreDark} />
               </Link>
-            </a>
+            </div>
 
-            <a href="#" className="store-btn">
+            <div className="store-btn">
               <span className="sr-only">Get in on Google play</span>
               <Link to="https://store.google.com/" target="_blank">
                 <img className="showlight" src={GoogleStore} />
                 <img className="showdark" src={GoogleStoreDark} />
               </Link>
-            </a>
+            </div>
           </div>
 
           <div className="more">
