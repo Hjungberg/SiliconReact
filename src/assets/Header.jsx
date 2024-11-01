@@ -8,31 +8,26 @@ import { Link, NavLink } from "react-router-dom";
 import DarkModeSwitch from "./DarkModeSwitch";
 
 const Header = () => {
-  
   const [showMeny, setShowMeny] = useState(false);
-  const url = window.location.pathname.split('/').pop();
+  const url = window.location.pathname.split("/").pop();
 
   const toggleMenu = () => {
     const mainMenu = document.querySelector("#main-menu");
-    const menuBtn = document.querySelector('.menu-btn')
-    
+    const menuBtn = document.querySelector(".menu-btn");
+
     setShowMeny(!showMeny);
     if (showMeny) {
       mainMenu.classList.add("hide");
-      menuBtn.setAttribute('aria-expanded', false)
-      
+      menuBtn.setAttribute("aria-expanded", false);
     } else {
       mainMenu.classList.remove("hide");
-      menuBtn.setAttribute('aria-expanded', true)
+      menuBtn.setAttribute("aria-expanded", true);
     }
-    
   };
-  
+
   useEffect(() => {
-    const menuBtn = document.querySelector('.menu-btn')
-    menuBtn.setAttribute('aria-expanded', false)
-
-
+    const menuBtn = document.querySelector(".menu-btn");
+    menuBtn.setAttribute("aria-expanded", false);
   }, [url]);
 
   return (

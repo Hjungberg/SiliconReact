@@ -1,10 +1,10 @@
 import React from "react";
 
-import BxCheckCircle from '../images/bx-check-circle.svg'
-import IconRightArrow from '../images/icon-right-arrow.svg'
-import ImgSend from '../images/send.svg'
-import IconCard from '../images/icon-card.svg'
-import IconCashback from '../images/icon-cashback.svg'
+import BxCheckCircle from "../images/bx-check-circle.svg";
+import IconRightArrow from "../images/icon-right-arrow.svg";
+import ImgSend from "../images/send.svg";
+import IconCard from "../images/icon-card.svg";
+import IconCashback from "../images/icon-cashback.svg";
 
 const Money = () => {
   return (
@@ -22,23 +22,20 @@ const Money = () => {
               </div>
               <div>
                 <div className="icon-transfer">
-                  <img src={BxCheckCircle}  alt="" />
+                  <img src={BxCheckCircle} alt="" />
                   <p>No monthly cash commission</p>
                 </div>
               </div>
               <div>
                 <div className="icon-transfer">
-                  <img src={BxCheckCircle}  alt="" />
+                  <img src={BxCheckCircle} alt="" />
                   <p>Manage payments and transactions online</p>
                 </div>
               </div>
               <div className="space-y-1">
                 <a href="#" className="btn btn-primary ">
                   <span>Learn more</span>
-                  <img
-                    src={IconRightArrow}
-                    className="user-icon"
-                  />
+                  <img src={IconRightArrow} className="user-icon" />
                 </a>
               </div>
             </div>
@@ -86,10 +83,7 @@ const Money = () => {
               <div className="space-y-3">
                 <a href="#" className="btn btn-primary sp">
                   <span>Learn more</span>
-                  <img
-                    src={IconRightArrow}
-                    className="user-icon"
-                  />
+                  <img src={IconRightArrow} className="user-icon" />
                 </a>
               </div>
             </div>

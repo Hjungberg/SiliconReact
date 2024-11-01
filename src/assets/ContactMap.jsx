@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import googleMap from "../images/map.svg";
 import youtube from "../images/youtube-square.svg";
@@ -13,7 +14,14 @@ const ContactMap = () => {
   return (
     <section className="mapSection container">
       <div className="googleMap">
-        <img src={googleMap} alt="" className="" />
+        <Link
+          target="_blank"
+          to={
+            "https://www.google.com/maps/place/2306+San+Bruno+Ave,+San+Francisco,+CA+94134,+USA/@37.7323218,-122.413851,15.5z/data=!4m6!3m5!1s0x808f7efeae244721:0xb69264495f5f8e6f!8m2!3d37.733729!4d-122.4066182!16s%2Fg%2F11c16cthzy?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
+          }
+        >
+          <img src={googleMap} alt="" className="" />
+        </Link>
       </div>
       <div>
         <div className="mapcard">
@@ -55,16 +63,16 @@ const ContactMap = () => {
 
         <div className="maplinks container">
           <a href="https://www.facebook.com" target="_blank">
-            <img src={facebook}  />
+            <img src={facebook} />
           </a>
           <a href="https://www.x.com" target="_blank">
-            <img src={twitter}  />
+            <img src={twitter} />
           </a>
           <a href="https://www.instagram.com" target="_blank">
-            <img src={insta}  />
+            <img src={insta} />
           </a>
           <a href="https://www.youtube.com" target="_blank">
-            <img src={youtube}  />
+            <img src={youtube} />
           </a>
         </div>
       </div>

@@ -36,8 +36,8 @@ const ContactForm = () => {
   if (submitted) {
     return (
       <div className="contactForm infobox">
-        <p className="h1">Tack för ditt meddelande!</p>
-        <p className="h2">Vi återkommer så snart vi kan.</p>
+        <p className="h1">Thank you for your message!</p>
+        <p className="h2">We will contact you as soon as we can.</p>
         <button className="btn btn-primary" onClick={handleOk}>
           OK
         </button>
@@ -94,7 +94,10 @@ const ContactForm = () => {
         <select
           className="contactFormText"
           {...register("specialist", {
-            required: {value: true, message: "The specialist field is required"},
+            required: {
+              value: true,
+              message: "The specialist field is required",
+            },
           })}
         >
           <option value="">Select...</option>

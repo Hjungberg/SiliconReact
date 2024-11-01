@@ -28,19 +28,17 @@ const Newsletter = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const regEx = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-    
-    
+
     const newErrors = {};
     Object.keys(formData).forEach((field) => {
-      let test = formData[field]
+      let test = formData[field];
       if (test === "") {
         newErrors[field] = `The Email field is required.`;
       }
-      
+
       if (!regEx.test(test)) {
         newErrors[field] = `Not a valid Email`;
       }
- 
     });
 
     if (Object.keys(newErrors).length > 0) {

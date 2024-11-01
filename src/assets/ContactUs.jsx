@@ -2,7 +2,7 @@ import React from "react";
 
 import addGroup from "../images/iconcareer.svg";
 import envelope from "../images/iconletter.svg";
-import iconR from '../images/icon-r.svg'
+import iconR from "../images/icon-r.svg";
 
 const ContactUs = () => {
   return (
@@ -16,10 +16,14 @@ const ContactUs = () => {
             </div>
             <div className="contactUsText">
               <h3>Email us</h3>
-              <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
+              <p>
+                Please feel free to drop us a line. We will respond as soon as
+                possible.
+              </p>
 
-              <div  className="messageUs">
-              <a href='#'>Leave a message </a><img src={iconR} alt="" />
+              <div className="messageUs">
+                <a href="#">Leave a message </a>
+                <img src={iconR} alt="" />
               </div>
             </div>
           </div>
@@ -29,10 +33,14 @@ const ContactUs = () => {
             </div>
             <div className="contactUsText">
               <h3>Careers</h3>
-              <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
+              <p>
+                Sit ac ipsum leo lorem magna nunc mattis maecenas non
+                vestibulum.
+              </p>
 
-              <div  className="messageUs">
-              <a href='#'>Send an application</a><img src={iconR} alt="" />
+              <div className="messageUs">
+                <a href="#">Send an application</a>
+                <img src={iconR} alt="" />
               </div>
             </div>
           </div>

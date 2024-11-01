@@ -1,13 +1,13 @@
-import React from 'react'
-import BreadCrum from '../assets/BreadCrum'
+import React from "react";
+import BreadCrum from "../assets/BreadCrum";
 
 const SignIn = () => {
   return (
     <div>
-    <BreadCrum />
+      <BreadCrum />
       SignIn
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

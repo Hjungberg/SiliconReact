@@ -826,15 +826,17 @@ h6 {
   margin-right: 1rem;
   width: 60%;
   height: 300px;
+
   li {
     list-style: none;
   }
 }
+
 .client-card {
-background-color: var(--clr-bg);
-padding-right: 1rem;  
-height: 300px;
-margin-right: 1rem;
+  background-color: var(--clr-bg);
+  padding-right: 1rem;
+  height: 300px;
+  margin-right: 1rem;
 
 }
 
@@ -898,11 +900,12 @@ margin-right: 1rem;
   flex-direction: column;
   padding-top: 2rem;
   padding: 2rem;
+
   a {
     cursor: pointer;
     text-decoration: none;
   }
-  
+
 }
 
 .quest-contact-item button {
@@ -974,7 +977,7 @@ margin-right: 1rem;
   justify-content: space-between;
   text-overflow: clip;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451);
-  
+
 }
 
 .questions-list-items p {
@@ -1010,6 +1013,7 @@ margin-right: 1rem;
   width: 50px;
   height: 50px;
 }
+
 .newsletterErrors {
   font-size: .8rem;
   color: red;
@@ -1098,25 +1102,30 @@ margin-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 1rem;
   width: 100%;
+
   a {
     text-decoration: none;
     cursor: pointer;
   }
 }
+
 .bread {
   display: flex;
   justify-content: left;
+  gap: .5rem;
+
   img {
     height: 1.5rem;
     width: 1.5rem;
   }
 }
+
 .contact {
   display: flex;
   background-color: var(--clr-bg-100);
   padding-top: 2rem;
 
-  
+
 
 }
 
@@ -1178,18 +1187,21 @@ margin-right: 1rem;
   margin-top: -500px;
   margin-left: 50%;
 }
+
 @media (width <=992px) {
   .contactForm {
     margin: 0rem auto;
     margin-top: 2rem;
-    
+
     width: auto;
-  
+
   }
+
   .contactUsGrid {
     width: 100%;
   }
 }
+
 .contactLabel {
   margin-top: 1.5rem;
 }
@@ -1207,33 +1219,39 @@ margin-right: 1rem;
   margin-top: 8rem;
   justify-content: center;
 }
+
 .mapSection {
   display: flex;
   margin-top: 2rem;
 }
+
 .mapcard {
   margin-left: 3rem;
   margin-bottom: 2rem;
   width: 100%;
   justify-content: left;
-  
+
 }
+
 .mapline {
   display: flex;
   width: 100%;
   margin-top: 1rem;
   text-wrap: nowrap;
   gap: 1rem;
+
   img {
     height: 1.5rem;
     width: 1.5rem;
   }
-  
-  
+
+
 }
+
 .gap {
   width: 1.5rem;
 }
+
 .maplinks {
   display: inline-flex;
   margin-left: 2rem;
@@ -1241,20 +1259,24 @@ margin-right: 1rem;
   height: 3rem;
   width: 50%;
 }
+
 @media (width <=992px) {
   .googleMap {
     display: none;
   }
 }
+
 .accordion-content {
   padding: 1rem 1rem;
 }
+
 .subThank {
-  display: flex; 
+  display: flex;
   font-size: 2rem;
   font-weight: 800;
   justify-content: center;
   gap: 1rem;
+
   button {
     margin-top: 0.8rem;
     height: 2rem;
@@ -1262,6 +1284,7 @@ margin-right: 1rem;
     width: 5rem;
   }
 }
+
 .infobox {
   display: flex;
   text-align: center;

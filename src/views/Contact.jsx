@@ -5,17 +5,16 @@ import BreadCrum from "../assets/BreadCrum";
 import ContactMap from "../assets/ContactMap";
 
 const Contact = () => {
-
   return (
     <>
-    <section>
-      <BreadCrum />
-      <ContactUs />
-      <ContactForm />
-      <ContactMap />
-    </section>
+      <section>
+        <BreadCrum />
+        <ContactUs />
+        <ContactForm />
+        <ContactMap />
+      </section>
     </>
-  )
+  );
 };
 
 export default Contact;

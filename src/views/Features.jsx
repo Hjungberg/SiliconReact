@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import Feature from "../assets/Features"
-import BreadCrum from '../assets/BreadCrum'
+import Feature from "../assets/Features";
+import BreadCrum from "../assets/BreadCrum";
 
 const Features = () => {
   return (
     <>
-    <BreadCrum />
-    <Feature />
-    
+      <BreadCrum />
+      <Feature />
     </>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
