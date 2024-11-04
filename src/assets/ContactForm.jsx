@@ -13,13 +13,8 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     const res = await axios.post(
-      "https://win24-assignment.azurewebsites.net/api/forms/contact",
-      data,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+      "https://win24-assignment.azurewebsites.net/api/forms/contact", data
+
     );
 
     if (res.status === 200) {

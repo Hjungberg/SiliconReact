@@ -1,29 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import IconPhone from "../images/icon-phone.svg";
 import ContactBlue from "../images/contact-blue.svg";
 import ContactGreen from "../images/contact-green.svg";
 import IconChat from "../images/icon-chat.svg";
-import { Link } from "react-router-dom";
+import { ExternalData } from "./ExternalData";
 
 const Questions = () => {
-  const [getFaq, setGetFaq] = useState([]);
-
-  const fetchData = async () => {
-    const res = await fetch(
-      "https://win24-assignment.azurewebsites.net/api/faq"
-    );
-    const data = await res.json();
-    setGetFaq(data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  // Lite hjälp från chat-gpt.
-  const AccordionItem = ({ title, content, isOpen, onToggle }) => {
-    return (
+  
+  const { getFaq } = useContext(ExternalData)
+        
+        const AccordionItem = ({ title, content, isOpen, onToggle }) => {
+          return (
       <>
         <div className="questions-list-items">
           <p>{title}</p>

@@ -36,14 +36,15 @@ const Header = () => {
         Skip to main content
       </a>
       <div className="container">
-        <Link to="">
+        <a href="/">
+        
           <img className="showlight" src={SiliconLogo} alt="Silicon Logotype" />
           <img
             className="showdark"
             src={SiliconLogoDark}
             alt="Silicon Logotype"
           />
-        </Link>
+        </a>
 
         <DarkModeSwitch />
 
@@ -60,17 +61,17 @@ const Header = () => {
         <ul id="main-menu" className="main-menu ">
           <div className="pad2">
             <li>
-              <NavLink className="nav-link pad2 " to="features">
+              <Link className="nav-link pad2 " to="features" onClick={toggleMenu}>
                 Features
-              </NavLink>
-              <NavLink className="nav-link pad2 " to="contact">
+              </Link>
+              <Link className="nav-link pad2 " to="contact" onClick={toggleMenu}>
                 Contact
-              </NavLink>
+              </Link>
             </li>
           </div>
 
           <li>
-            <Link to="SignIn" className="btn btn-primary">
+            <Link to="SignIn" className="btn btn-primary" onClick={toggleMenu}>
               <img src={UserIcon} className="user-icon" />
               <span>Sign in / Up</span>
             </Link>

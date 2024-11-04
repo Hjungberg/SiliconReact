@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 // import axios from 'axios'
 
 import Quotes from "../images/quotes.svg";
 import Stars4 from "../images/4stars.svg";
 import Stars5 from "../images/5stars.svg";
+import { ExternalData } from "./ExternalData";
 
 const Review = () => {
-  const [reviews, setReviews] = useState([]);
 
-  const fetchData = async () => {
-    const res = await fetch(
-      "https://win24-assignment.azurewebsites.net/api/testimonials"
-    );
-    const data = await res.json();
-    setReviews(data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { reviews } = useContext(ExternalData)
 
   let images = [];
   images[1] = Stars4;
@@ -54,7 +44,7 @@ const Review = () => {
                         className="client-img3"
                       />
                       <div className="client-name">
-                        <p className="h5">{reviews.author}</p>
+                        <p className="text-lg">{reviews.author}</p>
                         <p>{reviews.jobRole}</p>
                       </div>
                     </div>

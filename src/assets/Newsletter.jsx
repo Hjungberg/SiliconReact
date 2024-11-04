@@ -60,10 +60,11 @@ const Newsletter = () => {
     if (res.ok) {
       setSubmitted(true);
       setFormData({ email: "" });
-      const data = await res.text;
+      // const data = await res.text;
     } else {
-      const data = await res.text;
+      // const data = await res.text;
     }
+    
   };
 
   if (submitted) {
