@@ -8,7 +8,6 @@ import Home from "./views/Home";
 import Contact from "./views/Contact";
 import Features from "./views/Features";
 import SignIn from "./views/SignIn";
-import ExternalData from "./assets/ExternalData";
 import ExternalContext from "./assets/ExternalData";
 
 
