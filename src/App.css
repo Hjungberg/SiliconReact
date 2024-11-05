@@ -850,6 +850,7 @@ h6 {
   margin: 1rem;
   gap: 1rem;
 }
+
 .client-name {
   font-weight: 700;
   font-size: .7rem;
@@ -869,6 +870,7 @@ h6 {
 
 .questions {
   padding-top: 6rem;
+
 }
 
 .quest-mobile-only {
@@ -892,6 +894,7 @@ h6 {
 .quest-sections {
   display: flex;
   flex: 0 0 100%;
+ 
 }
 
 .quest-contact {
@@ -934,6 +937,7 @@ h6 {
 .questions-list {
   align-items: center;
   justify-content: center;
+  
 }
 
 @media (width < 768px) {
@@ -980,8 +984,11 @@ h6 {
   padding: 1rem;
   justify-content: space-between;
   text-overflow: clip;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451);
+}
 
+.question-box {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451); 
+  
 }
 
 .questions-list-items p {
@@ -993,6 +1000,19 @@ h6 {
   width: 64px;
   justify-content: right;
 }
+.accordion-content {
+  transition:  all 200ms;
+  padding: .5rem;
+  
+}
+
+.accordion-content-hidden {
+  padding: 0;
+  height: 0px;
+  font-size: 0px;
+
+}
+
 
 .right-just {
   justify-content: right;
@@ -1271,9 +1291,6 @@ h6 {
   }
 }
 
-.accordion-content {
-  padding: 1rem 1rem;
-}
 
 .subThank {
   display: flex;

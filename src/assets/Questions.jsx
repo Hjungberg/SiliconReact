@@ -14,6 +14,7 @@ const Questions = () => {
         const AccordionItem = ({ title, content, isOpen, onToggle }) => {
           return (
       <>
+        <div className="question-box">
         <div className="questions-list-items">
           <p>{title}</p>
           <a
@@ -28,7 +29,11 @@ const Questions = () => {
             ></i>
           </a>
         </div>
-        {isOpen && <div className="accordion-content">{content}</div>}
+        <div className={
+          isOpen ? "accordion-content" : "accordion-content accordion-content-hidden"}>
+          {content}
+        </div>
+        </div>
       </>
     );
   };

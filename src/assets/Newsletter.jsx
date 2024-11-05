@@ -32,13 +32,13 @@ const Newsletter = () => {
     const newErrors = {};
     Object.keys(formData).forEach((field) => {
       let test = formData[field];
+      if (!regEx.test(test)) {
+        newErrors[field] = `Not a valid Email`;
+      }
       if (test === "") {
         newErrors[field] = `The Email field is required.`;
       }
 
-      if (!regEx.test(test)) {
-        newErrors[field] = `Not a valid Email`;
-      }
     });
 
     if (Object.keys(newErrors).length > 0) {
