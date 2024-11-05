@@ -8,31 +8,35 @@ import IconChat from "../images/icon-chat.svg";
 import { ExternalData } from "./ExternalData";
 
 const Questions = () => {
-  
-  const { getFaq } = useContext(ExternalData)
-        
-        const AccordionItem = ({ title, content, isOpen, onToggle }) => {
-          return (
+  const { getFaq } = useContext(ExternalData);
+
+  const AccordionItem = ({ title, content, isOpen, onToggle }) => {
+    return (
       <>
         <div className="question-box">
-        <div className="questions-list-items">
-          <p>{title}</p>
-          <a
-            href="#features"
-            className="btn-round btn-primary"
-            onClick={onToggle}
+          <div className="questions-list-items">
+            <p>{title}</p>
+            <a
+              href="#features"
+              className="btn-round btn-primary"
+              onClick={onToggle}
+            >
+              <i
+                className={
+                  isOpen ? "fa-solid fa-chevron-up" : "fa-solid fa-chevron-down"
+                }
+              ></i>
+            </a>
+          </div>
+          <div
+            className={
+              isOpen
+                ? "accordion-content"
+                : "accordion-content accordion-content-hidden"
+            }
           >
-            <i
-              className={
-                isOpen ? "fa-solid fa-chevron-up" : "fa-solid fa-chevron-down"
-              }
-            ></i>
-          </a>
-        </div>
-        <div className={
-          isOpen ? "accordion-content" : "accordion-content accordion-content-hidden"}>
-          {content}
-        </div>
+            {content}
+          </div>
         </div>
       </>
     );

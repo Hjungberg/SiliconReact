@@ -894,7 +894,7 @@ h6 {
 .quest-sections {
   display: flex;
   flex: 0 0 100%;
- 
+
 }
 
 .quest-contact {
@@ -912,7 +912,6 @@ h6 {
     cursor: pointer;
     text-decoration: none;
   }
-
 }
 
 .quest-contact-item button {
@@ -937,7 +936,7 @@ h6 {
 .questions-list {
   align-items: center;
   justify-content: center;
-  
+
 }
 
 @media (width < 768px) {
@@ -987,8 +986,8 @@ h6 {
 }
 
 .question-box {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451); 
-  
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1568627451);
+
 }
 
 .questions-list-items p {
@@ -1000,10 +999,11 @@ h6 {
   width: 64px;
   justify-content: right;
 }
+
 .accordion-content {
-  transition:  all 200ms;
+  transition: all 200ms;
   padding: .5rem;
-  
+
 }
 
 .accordion-content-hidden {
@@ -1121,7 +1121,6 @@ h6 {
 }
 
 .breadcrum {
-
   background-color: var(--clr-bg);
   padding-top: 5rem;
   padding-bottom: 1rem;
@@ -1149,23 +1148,18 @@ h6 {
   background-color: var(--clr-bg);
   background-image: linear-gradient(to top, rgba(99, 101, 241, 0.1), rgba(219, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
   padding-top: 2rem;
-
-
-
 }
 
 .contactUs {
   display: grid;
   margin-top: 2rem;
   justify-content: flex-start;
-
 }
 
 .contactUsGrid {
   margin-top: 3rem;
   height: 400px;
   width: 50%;
-
 }
 
 .contactUsCard {
@@ -1176,8 +1170,6 @@ h6 {
   background-color: white;
   height: 100%;
   border-radius: 50%;
-
-
 }
 
 .contactUsText {
@@ -1194,7 +1186,6 @@ h6 {
   display: inline-flex;
   text-wrap: nowrap;
   align-items: center;
-
 }
 
 .contactForm {
@@ -1217,9 +1208,7 @@ h6 {
   .contactForm {
     margin: 0rem auto;
     margin-top: 2rem;
-
     width: auto;
-
   }
 
   .contactUsGrid {
@@ -1237,7 +1226,6 @@ h6 {
   font-size: 1rem;
   height: 3rem;
   padding-left: .5em;
-
 }
 
 .btn-contact {
@@ -1269,8 +1257,6 @@ h6 {
     height: 1.5rem;
     width: 1.5rem;
   }
-
-
 }
 
 .gap {
@@ -1290,7 +1276,6 @@ h6 {
     display: none;
   }
 }
-
 
 .subThank {
   display: flex;
@@ -1312,4 +1297,10 @@ h6 {
   text-align: center;
   align-items: center;
   height: 650px;
+}
+
+.sign-in {
+  padding-top: 4rem;
+  text-align: center;
+  font-weight: 800;
 }

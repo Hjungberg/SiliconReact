@@ -38,7 +38,6 @@ const Newsletter = () => {
       if (test === "") {
         newErrors[field] = `The Email field is required.`;
       }
-
     });
 
     if (Object.keys(newErrors).length > 0) {
@@ -60,11 +59,7 @@ const Newsletter = () => {
     if (res.ok) {
       setSubmitted(true);
       setFormData({ email: "" });
-      // const data = await res.text;
-    } else {
-      // const data = await res.text;
     }
-    
   };
 
   if (submitted) {

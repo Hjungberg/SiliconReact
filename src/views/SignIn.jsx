@@ -5,7 +5,9 @@ const SignIn = () => {
   return (
     <div>
       <BreadCrum />
-      SignIn
+      <main className="sign-in">
+        Under Construction
+      </main>
     </div>
   );
 };
